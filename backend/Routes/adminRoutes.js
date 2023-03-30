@@ -9,13 +9,21 @@ adminRouter.get("/", async (req, res) => {
   } catch (error) {
     res.send({ msg: error.messege });
   }
-})
-adminRouter.post("/add",async(req,res)=>{
-    try {
-      const user =   new ProductModel(req.body)
-      await user.save()
-        res.send(`Data successfully posted`);
-      } catch (error) {
-        res.send({ msg: error.messege });
-      }
-})
+});
+adminRouter.post("/add", async (req, res) => {
+  try {
+    const user = new ProductModel(req.body);
+    await user.save();
+    res.send(`Data successfully posted`);
+  } catch (error) {
+    res.send({ msg: error.messege });
+  }
+});
+adminRouter.delete("/delete/:id", async (req, res) => {
+  const id = req.params.id;
+  try {
+    const user = await ProductModel.deleteOne({ _id: id });
+  } catch (error) {
+    res.send({ msg: error.messege });
+  }
+});
