@@ -1,12 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import Admin from './Admin/Admin';
 import Filter from './components/Filter';
 
 function App() {
   return (
     <div className="App">
-      <Filter/>
-      
     </div>
   );
 }
