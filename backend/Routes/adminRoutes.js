@@ -12,8 +12,9 @@ adminRouter.get("/", async (req, res) => {
 })
 adminRouter.post("/add",async(req,res)=>{
     try {
-        let data = await ProductModel.find();
-        res.send(data);
+      const user =   new ProductModel(req.body)
+      await user.save()
+        res.send(`Data successfully posted`);
       } catch (error) {
         res.send({ msg: error.messege });
       }
