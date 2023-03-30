@@ -22,8 +22,9 @@ adminRouter.post("/add", async (req, res) => {
 adminRouter.delete("/delete/:id", async (req, res) => {
   const id = req.params.id;
   try {
-    const user = await ProductModel.deleteOne({ _id: id });
+     await ProductModel.deleteOne({ _id: id });
   } catch (error) {
     res.send({ msg: error.messege });
   }
 });
+module.exports = {adminRouter}
