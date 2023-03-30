@@ -1,12 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
-import Filter from './components/Filter';
+//import Filter from './components/Filter';
+//import MainRoutes from './pages/MainRoutes';
+import Medicines from './pages/Medicines';
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <Filter/>
       
+
+      
+      <Medicines/>
+     
     </div>
   );
 }
