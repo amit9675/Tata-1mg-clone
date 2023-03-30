@@ -18,3 +18,4 @@ adminRouter.post("/add",async(req,res)=>{
         res.send({ msg: error.messege });
       }
 })
+// console.log(.)
