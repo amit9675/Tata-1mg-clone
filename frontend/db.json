@@ -1,0 +1,95 @@
+{
+    "medicines": [
+      {
+        "id": 1,
+        "name": "medicine 1",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/03b37173d81947e28d8d961050e17e38/nutrileague-multivitamin-for-kids-gummies.jpg",
+        "category": "Veterinary"
+      },
+      {
+        "id": 2,
+        "name": "medicine 2",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/dgcszilwgcv0dzorjzdk/muscleblaze-mb-vite-multivitamin-tablet.jpg",
+        "category": "Ayush"
+      },
+      {
+        "id": 3,
+        "name": "medicine 3",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/eb00c9b6206c449483ae7c1b73080e13/zingavita-multi-vitamins-with-probiotics-prebiotics-tablet.jpg",
+        "category": "Veterinary"
+      },
+      {
+        "id": 4,
+        "name": "medicine 4",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/32ab30a9fc77460990094aaf225fe6e2/vicks-zzz-quil-natural-melatonin-sleep-aid-nutraceutical-gummies.jpg",
+        "category": "Digital"
+      },
+      {
+        "id": 5,
+        "name": "medicine 5",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/11cc189116b04c0dbc6a4b5e7e2ec9d8/tata-1mg-multivitamin-gummies-with-zinc-magnesium-and-folic-acid-for-immunity-energy.jpg",
+        "category": "Veterinary"
+      },
+      {
+        "id": 6,
+        "name": "Watch 6",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/175d2f8051dc4f9e9fced7cd3863a45f/vicks-zzz-quil-natural-melatonin-sleep-aid-nutraceutical-gummies.jpg",
+        "category": "Ayush"
+      },
+      {
+        "id": 7,
+        "name": "Watch 7",
+        "image": "https://onemg.gumlet.io/c_fit,h_150,w_150,a_ignore,q_auto,f_auto/fkwvnbmxumpgwtsour8r.jpg",
+        "category": "Veterinary"
+      },
+      {
+        "id": 8,
+        "name": "Watch 8",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/175d2f8051dc4f9e9fced7cd3863a45f/vicks-zzz-quil-natural-melatonin-sleep-aid-nutraceutical-gummies.jpg",
+        "category": "Ayush"
+      },
+      {
+        "id": 9,
+        "name": "medicine 9",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/85552535086849b58cb1ab9d504dffe7/healthkart-hk-vitals-multivitamin-women-tablet.jpg",
+        "category": "Digital"
+      },
+      {
+        "id": 10,
+        "name": "medicine 10",
+        "image": "https://onemg.gumlet.io/c_fit,h_150,w_150,a_ignore,q_auto,f_auto/fkwvnbmxumpgwtsour8r.jpg",
+        "category": "Ayush"
+      },
+      {
+        "id": 11,
+        "name": "medicine 11",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/11cc189116b04c0dbc6a4b5e7e2ec9d8/tata-1mg-multivitamin-gummies-with-zinc-magnesium-and-folic-acid-for-immunity-energy.jpg",
+        "category": "Fitness"
+      },
+      {
+        "id": 12,
+        "name": "medicine 12",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/2ae51f8dc4ab426caac889be4d3efe12/vicks-immunocold-daily-multivitamin-tablet.jpg",
+        "category": "Ayush"
+      },
+      {
+        "id": 13,
+        "name": "medicine 13",
+        "image": "https://onemg.gumlet.io/c_fit,h_150,w_150,a_ignore,q_auto,f_auto/zgl6fsselhfjag5uunbk.jpg",
+        "category": "Treatments"
+      },
+      {
+        "id": 14,
+        "name": "medicine 14",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/11cc189116b04c0dbc6a4b5e7e2ec9d8/tata-1mg-multivitamin-gummies-with-zinc-magnesium-and-folic-acid-for-immunity-energy.jpg",
+        "category": "Sexual Wellness"
+      },
+      {
+        "id": 15,
+        "name": "medicine 15",
+        "image": "https://onemg.gumlet.io/images/c_fit,f_auto,w_150,q_auto,h_150/xqljyyelnecasglguvf6/revital-h-for-woman-tablet-with-multivitamins-calcium-zinc-natural-ginseng-for-daily-immunity-strong-bones-and-enhances-energy-level.jpg",
+        "category": "Mom & Baby"
+      }
+    ]
+  }
+  

@@ -1,5 +1,10 @@
-const express = require("express")
+
+const express = require("express");
+const { dbConnection } = require("./dbConnection");
+const { getRouter } = require("./Routes/get_products.route");
+require("dotenv").config()
+
 const app = express()
-app.listen(6900,(req,res)=>{
-    console.log(`Server runnug`)
-})
+app.use("/",getRouter)
+app.listen(process.env.PORT,dbConnection);
+
