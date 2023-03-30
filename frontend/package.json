@@ -13,7 +13,11 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
+<<<<<<< HEAD
     "redux-thunk": "^2.4.2",
+=======
+    "react-slick": "^0.29.0",
+>>>>>>> 843a9b2b800aae710b25aaa117159aed75026871
     "web-vitals": "^2.1.4"
   },
   "scripts": {
