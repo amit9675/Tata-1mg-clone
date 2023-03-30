@@ -5,6 +5,7 @@ const Filter = () => {
   return (
     <div>
       <h3>Filters</h3>
+      //file added
       <div>Category</div>
       <div data-testid="filter-category">
         <div>
