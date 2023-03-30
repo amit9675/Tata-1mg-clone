@@ -1,5 +1,3 @@
-
-
 const mongoose = require("mongoose");
 const { CartModel } = require("../Model/cart_model");
 const express = require("express");
