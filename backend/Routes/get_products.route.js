@@ -28,4 +28,15 @@ getRouter.get("/:id",async(req,res)=>{
         res.send({"msg":error.messege})
     }
 })
+getRouter.get("/:id",async(req,res)=>{
+    const {id} =  req.params
+    console.log(id)
+    try {
+            let data =  await ProductModel.find({_id:id})
+            res.send(data)
+       
+    } catch (error) {
+        res.send({"msg":error.messege})
+    }
+})
 module.exports = {getRouter}
