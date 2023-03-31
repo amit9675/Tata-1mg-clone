@@ -3,10 +3,10 @@ import React from "react";
 const Filter = () => {
   
   return (
-    <div>
+    <div style={{border:"2px solid red"}}>
       <h3>Filters</h3>
       <div>Category</div>
-      <div data-testid="filter-category">
+      <div >
         <div>
           <input type="checkbox" value="Veterinary" />
           <label>Veterinary</label>
