@@ -37,7 +37,6 @@ const Carousalsignup = () => {
       <Slider {...settings}>
         <Box justifyContent="center" w="100%" h="250px" textAlign="center"   >
           <Image src="https://www.1mg.com/images/login-signup/Know-Your-Medicines.png" margin="auto" />
-          <h3>0</h3>
           <br />
           <Text fontSize='md' as="b" >know your medicine</Text>
           <br />
@@ -46,25 +45,22 @@ const Carousalsignup = () => {
         </Box>
         <Box justifyContent="center" w="600px" h="250px" textAlign="center"   >
           <Image src="https://www.1mg.com/images/login-signup/Home-Delivery-of-Medicines.png" margin="auto" />
-          <h3>1</h3>
           <br />
-          <Text fontSize='md' as="b" >know your medicine</Text>
+          <Text fontSize='md' as="b" >Medicines home delivered</Text>
           <br />
-          <Text w="100%" textAlign="center" fontSize='xs'   >view medicine information like usage sideeffects and cheaper substutes before you take them</Text>
+          <Text w="100%" textAlign="center" fontSize='xs'   >Order any medicine or health product and we will deliver it for free.Enjoy discount on everything </Text>
           <br />
         </Box>
         <Box justifyContent="center" w="600px" h="250px" textAlign="center"   >
           <Image src="https://www.1mg.com/images/login-signup/Lab-Tests-at-Home.png" margin="auto" />
-          <h3>2</h3>
           <br />
-          <Text fontSize='md' as="b" >know your medicine</Text>
+          <Text fontSize='md' as="b" >Lab Tests at  Home</Text>
           <br />
-          <Text w="100%" textAlign="center" fontSize='xs'   >view medicine information like usage sideeffects and cheaper substutes before you take them</Text>
+          <Text w="100%" textAlign="center" fontSize='xs'   >Book any test from any lab.we will collect the sample and send the reports save upto 80% on everytime</Text>
           <br />
         </Box>
         <Box justifyContent="center" w="600px" h="250px" textAlign="center"   >
           <Image src="https://www.1mg.com/images/login-signup/Your-Go-To-Health-App.png" margin="auto" />
-          <h3>3</h3>
           <br />
           <Text fontSize='md' as="b" >Make Healthcare Simpler</Text>
           <br />
@@ -72,21 +68,11 @@ const Carousalsignup = () => {
           <br />
         </Box>
         <Box justifyContent="center" w="600px" h="250px" textAlign="center"   >
-          <Image src="https://www.1mg.com/images/login-signup/Home-Delivery-of-Medicines.png" margin="auto" />
-          <h3>4</h3>
-          <br />
-          <Text fontSize='md' as="b" >know your medicine</Text>
-          <br />
-          <Text w="100%" textAlign="center" fontSize='xs'   >view medicine information like usage sideeffects and cheaper substutes before you take them</Text>
-          <br />
-        </Box>
-        <Box justifyContent="center" w="600px" h="250px" textAlign="center"   >
           <Image src="https://www.1mg.com/images/login-signup/Health-Related-Queries.png" margin="auto" />
-          <h3>5</h3>
           <br />
-          <Text fontSize='md' as="b" >know your medicine</Text>
+          <Text fontSize='md' as="b" >Health Related Queries</Text>
           <br />
-          <Text w="100%" textAlign="center" fontSize='xs'   >view medicine information like usage sideeffects and cheaper substutes before you take them</Text>
+          <Text w="100%" textAlign="center" fontSize='xs'   >Consult Our certified doctors from anywhere anytime,and for free,we guarentee your privacy</Text>
           <br />
         </Box>
       </Slider>
