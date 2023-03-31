@@ -31,9 +31,9 @@ const Medicines = () => {
  
 
   return (
-    <div data-testid="watches" style={{ display: "flex" ,width:"80%",margin:"auto",backgroundColor:"whitesmoke"}} >
+    <div data-testid="watches" style={{ display: "flex" ,width:"80%",margin:"auto",backgroundColor:"white"}} >
       <Filter />
-      <br /><br /><br />
+     
       <div 
       
       style={{
@@ -43,6 +43,7 @@ const Medicines = () => {
         gap: "10px",
         gridTemplateColumns: "repeat(auto-fit, minmax(310px, max-content)",
         justifyContent: "center",
+        
       }}
       >
         {
@@ -63,10 +64,13 @@ const Medicines = () => {
           width: "80%",
           height: "400px",
           border: "2px solid black",
-          borderRadius: "2px"
+          borderRadius: "2px",
+          boxShadow:'2xl',
+          margin:"15"
+
         }}
       >
-        <div className="img_div"
+        <div 
           style={{
             display: "flex",
             height: "50%",
@@ -75,7 +79,7 @@ const Medicines = () => {
             justifyContent: "center",
           }}
         >
-          <img data-testid="watch-card-image"
+          <img 
             alt="watch"
             src={watch.image}
             style={{
@@ -100,7 +104,7 @@ const Medicines = () => {
         </div>
       </div>
             )
-          })};
+          })}
       </div>
 
       {/* {medicine?.map((el)=><div>
