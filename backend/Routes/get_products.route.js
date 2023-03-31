@@ -3,9 +3,6 @@ const { ProductModel } = require("../Model/product_model");
 // const app = express()
 const getRouter = express();
 getRouter.get("/", async (req, res) => {
-  // console.log("sfsfsr",req.query)
-  // let data =  await ProductModel.find({category:req.query.category})
-  //            res.send(data)
   try {
     if (!req.query.price && !req.query.category) {
       console.log("ad");

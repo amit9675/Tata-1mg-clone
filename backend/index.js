@@ -6,6 +6,8 @@ const { getRouter } = require("./Routes/get_products.route");
 require("dotenv").config()
 
 const app = express()
+const cors = require("cors")
+app.use(cors())
 app.use("/",getRouter)
 app.use("/admin",adminRouter)
 app.listen(process.env.PORT,dbConnection);
