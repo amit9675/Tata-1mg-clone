@@ -8,7 +8,7 @@ CartRouter.use(cart_authenticator);
 CartRouter.patch("/updt_quantity/:id", async (req, res) => {
   const { id } = req.params;
   const { quantity, userID } = req.body;
-  console.log( "---8----",quantity , userID)
+
   try {
     await CartModel.findByIdAndUpdate({ "_id":id ,"userID":userID}, { quantity });
     res.status(200).send({ status: "updated quantity 👍" });

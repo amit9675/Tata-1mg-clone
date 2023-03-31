@@ -8,15 +8,15 @@ const { CartRouter } = require("./Routes/cart_product.route");
 
 require("dotenv").config()
 
+const cors = require("cors")
 const app = express()
+app.use(cors())
 
 app.use(express.json())
 app.use("/", getRouter)
 app.use("/user", UserRouter);
 app.use("/cart",CartRouter)
 
-const cors = require("cors")
-app.use(cors())
 app.use("/",getRouter)
 app.use("/admin",adminRouter)
 
