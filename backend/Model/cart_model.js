@@ -4,3 +4,8 @@ const mongoose = require("mongoose");
 
 
 const CartModel = mongoose.model("cart_data",productSchema)
+ 
+
+module.exports = {
+    CartModel
+}
