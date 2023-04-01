@@ -6,14 +6,12 @@ import Medicines from './pages/Medicines';
 
 
 import Admin from './Admin/Admin';
-import Filter from './components/Filter';
+
 
 function App() {
   return (
     <div className="App">
-      
 
-      <Admin/>
      
      
     </div>
