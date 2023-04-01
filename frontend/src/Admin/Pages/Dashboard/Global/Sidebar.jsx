@@ -126,7 +126,7 @@ const Sidebar = () => {
             />
             <Item
               title="All Products"
-              to="/products"
+              to="/allProducts"
               icon={<BallotRoundedIcon />}
               selected={selected}
               setSelected={setSelected}
