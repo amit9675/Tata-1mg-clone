@@ -1,7 +1,7 @@
-import React from 'react'
+
 import Carousalsignup from "./Carousalsignup"
 import { Link } from "react-router-dom";
-
+import React, { useState } from 'react'
 
 import {
     Modal,
@@ -21,7 +21,17 @@ import {
 } from '@chakra-ui/react'
 
 const Loginmodal = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [email,setemail]=useState("");
+    const [password,setpassword]=useState("");
+    const HandleLogin=()=>{
+        const user={
+            email,
+            password
+           }
+        //    fetch
+    }
+
     return (
         <>
             <Button onClick={onOpen}>Login</Button>
@@ -38,8 +48,9 @@ const Loginmodal = () => {
 
                             <Box display="flex" flexDirection="column" w='50%' h="300px"  textAlign="center" alignItems="center" justifyContent="space-between"  >
                                 <Text fontSize='md' as="b">Get access to your orders, lab tests & doctor consultations</Text>
-                                <Input w="90%" variant='flushed' placeholder='Enter Email ID or Mobile No' />
-                                <Button colorScheme='red' variant='solid' w="90%" >Login</Button>
+                                 <Input w="90%" variant='flushed' placeholder='Enter Email' onChange={(e)=>setemail(e.target.value)} />
+                                <Input w="90%" variant='flushed' placeholder='Enter Password' onChange={(e)=>setpassword(e.target.value)} />
+                                <Button colorScheme='red' variant='solid' w="90%" onChange={HandleLogin} >Login</Button>
                                 <Box display="flex" justifyContent="center" >
                                     <Text fontSize='md'>New on 1mg?</Text>
                                     <Link to="/Signupmodal" ><Text color="red" >Sign Up</Text></Link>
