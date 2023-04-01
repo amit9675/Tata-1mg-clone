@@ -99,8 +99,6 @@ const AddProduct = () => {
                 onChange={handleChange}
                 value={values.ImageURL2}
                 name="ImageURL2"
-                error={!!touched.ImageURL2 && !!errors.ImageURL2}
-                helperText={touched.ImageURL2 && errors.ImageURL2}
                 sx={{ gridColumn: "span 4" }}
               />
               <TextField
@@ -151,7 +149,7 @@ const checkoutSchema = yup.object().shape({
         .required("required"),
     Price: yup.string().required("required"),
     ImageURL1: yup.string().url("invalid url").required("required"),
-    ImageURL2: yup.string().url("invalid url").required("required"),
+    ImageURL2: yup.string().url("invalid url"),
 
 });
 const initialValues = {

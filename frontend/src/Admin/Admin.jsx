@@ -8,6 +8,7 @@ import Sidebar from './Pages/Dashboard/Global/Sidebar'
 import Users from './Pages/Dashboard/Users'
 import AddProduct from './Pages/AddProduct'
 import FAQ from './Pages/FAQ'
+import AllProducts from './Pages/AllProduct'
 // import Team from "./Pages/Team"/
 const Admin = () => {
     const [theme,colorMode]=useMode()
@@ -22,6 +23,7 @@ const Admin = () => {
                 <Routes>
                     <Route path="/" element={<Dashboard/>}/>
                     <Route path='/users' element={<Users/>}/>
+                    <Route path='/allProducts' element={<AllProducts/>}/>
                     <Route path="/addproduct" element={<AddProduct/>}/>
                     <Route path="/faq" element={<FAQ/>}/>
                 </Routes>
