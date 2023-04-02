@@ -18,6 +18,7 @@ import {
 import Signupmodal from "../components/Signupmodal";
 import Loginmodal from "../components/Loginmodal";
 import PersonIcon from '@mui/icons-material/Person';
+// import { useNavigate } from "react-router-dom";
   const CAT_ITEMS = [
     {
       label: "Health Resource Center",
@@ -237,13 +238,13 @@ import PersonIcon from '@mui/icons-material/Person';
         <Stack direction={"row"} spacing={4} justify="center" alignItems={'center'} width={'100%'} mr={'20px'} >
         <Image width={"40px"} mr={"10px"} src={logo}/>
           {CAT_ITEMS.map((navItem) => (
-            <Box key={navItem.label} >
+            <Box key={navItem.label}>
               <Popover trigger={"hover"} placement={"bottom-start"}>
                 <PopoverTrigger>
                   <Link
                   fontSize={'smaller'}
                     // p={0.5}
-                    href={navItem.href ?? "#"}
+                    href={navItem.href ?? "/getdata"}
                     color={linkColor}
                     _hover={{
                       textDecoration: "none",
@@ -278,7 +279,7 @@ import PersonIcon from '@mui/icons-material/Person';
             <Divider orientation="vertical"  colorScheme={'grey'}/>
             <Text color={'rgb(255, 111, 97)'} cursor={'pointer'} ><Loginmodal/></Text> 
         </Flex>
-        <PersonIcon/>
+        <PersonIcon onClick={()=>navigate('/admin')}/>
         </Stack>
             
       </Box>

@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="App">
       
-      <CartPage/>
-      {/* <MainRoutes />   */}
+      {/* <CartPage/> */}
+      <MainRoutes />  
     </div>
   );
 }
