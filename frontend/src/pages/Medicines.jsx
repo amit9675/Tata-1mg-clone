@@ -56,7 +56,7 @@ const Medicines = () => {
     <div
      
       style={{
-        border:"3px solid red",
+  
         display: "flex",
         width: "100%",
         
