@@ -7,14 +7,15 @@ import Medicines from './pages/Medicines';
 
 import Admin from './Admin/Admin';
 import Filter from './components/Filter';
+import CartPage from './pages/Cart';
 
 function App() {
   return (
     <div className="App">
       
 
-      <Admin/>
-     
+      {/* <Admin/> */}
+     <CartPage/>
      
     </div>
   );
