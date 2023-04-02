@@ -25,6 +25,7 @@ import {
   Tab,
   Flex,
 } from "@chakra-ui/react";
+import Category from "./Navbar";
 
 const BlogTags = (props) => {
   return (
@@ -95,8 +96,8 @@ const SinglePage = () => {
   }, [id]);
 
   return (
-    
     <Container maxW={"10xl"} p="12" border="1px solid red" background="#F3F3F4">
+    <Category/>
       <Box maxW={"5xl"} p="12"  background="#F3F3F4" marginLeft="200px">
       <Box
         marginTop={{ base: "1", sm: "5" }}

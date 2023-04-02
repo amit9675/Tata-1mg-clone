@@ -16,8 +16,10 @@ import {
 import { useState } from "react";
 import axios from "axios";
 import { Box, Heading, Popover, PopoverTrigger, SimpleGrid, Text } from "@chakra-ui/react";
+import Category from "./Navbar";
 
 const Medicines = () => {
+  <Category/>
   const [medicine, setMedicine] = useState([]);
   const[loading,setLoading]=useState(false)
 
