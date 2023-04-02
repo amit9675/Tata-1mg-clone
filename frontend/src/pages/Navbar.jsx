@@ -15,6 +15,9 @@ import {
   import React from "react";
   import logo from "../Assets/favicon.jpg"
   import { useNavigate } from "react-router-dom";
+import Signupmodal from "../components/Signupmodal";
+import Loginmodal from "../components/Loginmodal";
+import PersonIcon from '@mui/icons-material/Person';
   const CAT_ITEMS = [
     {
       label: "Health Resource Center",
@@ -223,7 +226,7 @@ import {
         // fontFamily={"sans-serif"}
         shadow={"sm"}
         display={{ base: "none", md: "block" }}
-        // fontSize={"large"}
+        // 
         zIndex={99}
         top={0}
         position={"sticky"}
@@ -231,16 +234,16 @@ import {
         backgroundColor={"skyblue"}
       >
 
-        <Stack direction={"row"} spacing={4} justify="center" width={'95%'}>
+        <Stack direction={"row"} spacing={4} justify="center" alignItems={'center'} width={'100%'} mr={'20px'} >
         <Image width={"40px"} mr={"10px"} src={logo}/>
           {CAT_ITEMS.map((navItem) => (
-            <Box key={navItem.label}>
+            <Box key={navItem.label} >
               <Popover trigger={"hover"} placement={"bottom-start"}>
                 <PopoverTrigger>
                   <Link
-                    p={2}
+                  fontSize={'smaller'}
+                    // p={0.5}
                     href={navItem.href ?? "#"}
-                    fontSize={"md"}
                     color={linkColor}
                     _hover={{
                       textDecoration: "none",
@@ -256,7 +259,7 @@ import {
                     border={0}
                     boxShadow={"xl"}
                     bg={popoverContentBgColor}
-                    p={4}
+                    p={2}
                     rounded={"xl"}
                     maxW={"min-content"}
                   >
@@ -270,13 +273,14 @@ import {
               </Popover>
             </Box>
           ))}
-        <Flex border='1px solid black' gap={'2px'} >
-            <Text color={'rgb(255, 111, 97)'} onClick={()=>navigate('/signup')} >SignUp</Text>
-            <Divider/>
-            <Text color={'rgb(255, 111, 97)'} onClick={()=>navigate('/login')} >LogIn</Text>
+        <Flex gap={'4px'} h='20px' fontSize={'smaller'}  >
+            <Text color={'rgb(255, 111, 97)'} cursor={'pointer'} ><Signupmodal/></Text>
+            <Divider orientation="vertical"  colorScheme={'grey'}/>
+            <Text color={'rgb(255, 111, 97)'} cursor={'pointer'} ><Loginmodal/></Text> 
         </Flex>
+        <PersonIcon/>
         </Stack>
-        
+            
       </Box>
     );
   }
