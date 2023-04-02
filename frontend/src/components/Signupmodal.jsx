@@ -47,7 +47,6 @@ const Signupmodal = () => {
     if(res){
         alert("Registered succesfully")
         setloading(false)
-        navigate('/login')
         
     }
    }).catch((err)=>{
