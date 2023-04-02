@@ -6,13 +6,14 @@ import Medicines from './pages/Medicines';
 
 
 import Admin from './Admin/Admin';
+import MainRoutes from './pages/MainRoutes';
 
 
 function App() {
   return (
     <div className="App">
 
-     
+     <MainRoutes/>
      
     </div>
   );

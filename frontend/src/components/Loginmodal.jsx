@@ -2,6 +2,7 @@
 import Carousalsignup from "./Carousalsignup"
 import { Link } from "react-router-dom";
 import React, { useState } from 'react'
+import {  Navigate, useNavigate } from "react-router-dom";
 
 import {
     Modal,
@@ -24,12 +25,28 @@ const Loginmodal = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [email,setemail]=useState("");
     const [password,setpassword]=useState("");
+    const navigate=useNavigate()
     const HandleLogin=()=>{
         const user={
             email,
             password
            }
-        //    fetch
+           fetch("https://combative-red-horse.cyclic.app/user/user_login",{
+            method:"POST",
+            headers: {
+                "Content-Type": "application/json",
+              },
+              body:JSON.stringify(user)
+           }).then((res)=>res.json()).then((res)=>{
+            console.log(res)
+            
+            if(res){
+                alert("Registered succesfully")
+                navigate('/homepage')
+            }
+           }).catch((err)=>{
+            alert("SomeError occured")
+           })
     }
 
     return (
