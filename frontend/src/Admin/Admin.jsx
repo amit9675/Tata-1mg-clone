@@ -20,9 +20,6 @@ const Admin = () => {
                 <Sidebar/>
             <main className='content'>
                 <TopBar/>
-                <Routes>
-                    
-                </Routes>
             </main>
             </div>
         </ThemeProvider>
