@@ -12,9 +12,11 @@ function App() {
     <div className="App">
       
 
-      <Admin/>
-     
-     
+
+{/* <MainRoutes/> */}
+
+    <CartPage/>
+
     </div>
   );
 }

@@ -12,7 +12,7 @@ const AllProducts = () => {
     const [data,setData]=useState([])
     const getData=async()=>{
         try {
-            await axios.get('https://shy-pear-raven-cap.cyclic.app/getdata')
+            await axios.get('https://combative-red-horse.cyclic.app/getdata')
             .then(res=>setData(res.data))
             .then(res=>console.log(data))
         } catch (error) {
@@ -21,7 +21,7 @@ const AllProducts = () => {
     }
     const handleDelete=async(params)=>{
         try {
-            await axios.delete(`https://shy-pear-raven-cap.cyclic.app/admin/delete/${params.id}`)
+            await axios.delete(`https://combative-red-horse.cyclic.app/admin/delete/${params.id}`)
             .then((res)=>getData())
             .then((res)=>console.log(data))
         } catch (error) {
