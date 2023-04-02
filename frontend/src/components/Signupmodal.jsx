@@ -25,9 +25,11 @@ const Signupmodal = () => {
     const [name,setname]=useState("");
     const [email,setemail]=useState("");
     const [password,setpassword]=useState("");
-    const navigate=useNavigate()
+    const navigate=useNavigate();
+    const [loading,setloading]=useState(false)
 
     const Handleregister=()=>{
+        setloading(true)
    const user={
     name,
     email,
@@ -44,10 +46,13 @@ const Signupmodal = () => {
     
     if(res){
         alert("Registered succesfully")
+        setloading(false)
         navigate('/login')
+        
     }
    }).catch((err)=>{
     alert("SomeError occured")
+    setloading(false)
    })
 
     }
@@ -75,7 +80,7 @@ const Signupmodal = () => {
                                         <Text fontSize='xs'>Are you a healthcare Professional</Text>
                                     </Box>
                                 </Box>
-                                <Button colorScheme='red' variant='solid' w="90%" onClick={Handleregister}  >Register</Button>
+                                <Button isLoading={loading}  colorScheme='red' variant='solid' w="90%" onClick={Handleregister}  >Register</Button>
                                 <Box display="flex" justifyContent="center" >
                                     <Text fontSize='md'>Have an account?</Text>
                                     <Link to="/Loginmodal" ><Text color="red" >Login</Text></Link>
