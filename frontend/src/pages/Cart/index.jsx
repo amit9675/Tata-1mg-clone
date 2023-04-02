@@ -2,23 +2,39 @@ import { Box, Button, Divider, Flex, Grid, Image, Input, InputGroup, InputLeftEl
 import DeleteOutlineOutlined from '@mui/icons-material/DeleteOutlineOutlined'
 import { GridSearchIcon } from '@mui/x-data-grid'
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import CartItem from './CartItem'
 import PaymentForm from './FormControl'
 
 const CartPage = () => {
-    const [Quantity,setQuantity]=useState(1)
+    const [data,setData]=useState([])
     const [isloading,setIsLoading]=useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure()
+    const [sum,setSum]=useState(0)
+    let totalSum=sum
     const toast = useToast()
+    useEffect(()=>{
+        getData()
+    },[])
+
+    data.map((ele)=>{
+        return(totalSum+=ele.quantity*ele.price)
+    })
 
     const getData=async()=>{
         try {
-            await axios.get('https://shy-pear-raven-cap.cyclic.app/cart/get_products')
+            await axios.get('https://combative-red-horse.cyclic.app/cart/get_products',{
+                headers:{
+                    "Authorization":localStorage.getItem('token')
+                }
+            })
+            .then(res=>setData(res.data.Data))
+            .then(res=>console.log(data))
         } catch (error) {
             
         }
     }
-    const handlePay=()=>{
+        const handlePay=()=>{
         setIsLoading(true)
         setTimeout(() => {
             setIsLoading(false)
@@ -58,35 +74,19 @@ const CartPage = () => {
 
         <Box>
             <Flex w='80%' m='80px auto auto auto' h='100vh'  justifyContent={'center'} gap="30px" >
-                <Flex boxShadow={'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px'} w='60%' h='200px' justifyContent={'center'} >
-                    <Flex flexDir={'column'} w='90%' alignItems={'center'} >
-                        <Flex justifyContent={'space-between'} flexDir='row' w="100%" mt='20px' >
-                            <Text>Name</Text>
-                            <Text>Discounted_Price</Text>
-                        </Flex>
-                        <Flex justifyContent={'space-between'} flexDir='row' w="100%" mt='20px' >
-                            <Text>Brand_Name</Text>
-                            <Text>main_Price</Text>
-                        </Flex>
-                        <Flex justifyContent={'space-between'} alignItems='center' flexDir='row' w="100%" mt='20px' h={'50px'} >
-                            <Flex gap={'5px'} >
-                                <DeleteOutlineOutlined/>
-                                <Text>
-                                    Remove
-                                </Text>
-                            </Flex>
-                            <Flex gap='5px' alignItems='center' >
-                                <Button borderRadius={'22px'} bgColor={'rgb(255, 111, 97)'} h='20px' w='2px' onClick={()=>setQuantity((prev)=>prev-1)} >-</Button>
-                                <Text>{Quantity}</Text>
-                                <Button borderRadius={'22px'} bgColor={'rgb(255, 111, 97)'} h='20px' w='2px' onClick={()=>setQuantity((prev)=>prev+1)} >+</Button>
-                            </Flex>
-                        </Flex>
-                    </Flex>
-                </Flex>
+            <Flex flexDir={'column'} w='60%' border={'1px solid aqua'} gap={'10px'} >
+            {
+                data.map((ele,id)=>{
+                    return(
+                        <CartItem data={ele} getData={getData} key={id}/>
+                    )
+                    })
+                }
+            </Flex>
                 <Flex boxShadow={'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px'} w={'30%'} h='300px' flexDir='column' alignItems={'center'}  >
                     <Flex justifyContent={'space-between'} flexDir='row' w="90%" mt='10px' >
                             <Text fontSize={'small'} color='grey' >Item Total(MRP)</Text>
-                            <Text>main_Price</Text>
+                            <Text>Rs.{totalSum}</Text>
                     </Flex>
                     <Flex justifyContent={'space-between'} flexDir='row' w="90%" mt='10px' >
                             <Text fontSize={'small'} color='grey' >Price Discount</Text>

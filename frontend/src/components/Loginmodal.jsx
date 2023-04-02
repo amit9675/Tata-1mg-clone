@@ -3,6 +3,7 @@ import Carousalsignup from "./Carousalsignup"
 import { Link } from "react-router-dom";
 import React, { useState } from 'react'
 import {  Navigate, useNavigate } from "react-router-dom";
+import { Spinner } from '@chakra-ui/react'
 
 import {
     Modal,
@@ -25,8 +26,12 @@ const Loginmodal = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [email,setemail]=useState("");
     const [password,setpassword]=useState("");
-    const navigate=useNavigate()
+    const navigate=useNavigate();
+    const [loading,setloading]=useState(false);
+
     const HandleLogin=()=>{
+        console.log("hilogin")
+        setloading(true)
         const user={
             email,
             password
@@ -41,11 +46,13 @@ const Loginmodal = () => {
             console.log(res)
             
             if(res){
-                alert("Registered succesfully")
-                navigate('/homepage')
+                alert("Login succesfull")
+                setloading(false)
+                navigate('/')
             }
            }).catch((err)=>{
-            alert("SomeError occured")
+            alert("Login failed")
+            setloading(false)
            })
     }
 
@@ -67,7 +74,7 @@ const Loginmodal = () => {
                                 <Text fontSize='md' as="b">Get access to your orders, lab tests & doctor consultations</Text>
                                  <Input w="90%" variant='flushed' placeholder='Enter Email' onChange={(e)=>setemail(e.target.value)} />
                                 <Input w="90%" variant='flushed' placeholder='Enter Password' onChange={(e)=>setpassword(e.target.value)} />
-                                <Button colorScheme='red' variant='solid' w="90%" onChange={HandleLogin} >Login</Button>
+                                <Button colorScheme='red' variant='solid' w="90%"  isLoading={loading}  onClick={HandleLogin} >Login</Button>
                                 <Box display="flex" justifyContent="center" >
                                     <Text fontSize='md'>New on 1mg?</Text>
                                     <Link to="/Signupmodal" ><Text color="red" >Sign Up</Text></Link>
