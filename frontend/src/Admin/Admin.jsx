@@ -21,11 +21,7 @@ const Admin = () => {
             <main className='content'>
                 <TopBar/>
                 <Routes>
-                    <Route path="/" element={<Dashboard/>}/>
-                    <Route path='/users' element={<Users/>}/>
-                    <Route path='/allProducts' element={<AllProducts/>}/>
-                    <Route path="/addproduct" element={<AddProduct/>}/>
-                    <Route path="/faq" element={<FAQ/>}/>
+                    
                 </Routes>
             </main>
             </div>
