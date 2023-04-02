@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Carousalsignup from "./Carousalsignup"
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 
 import {
@@ -21,7 +21,36 @@ import {
 } from '@chakra-ui/react'
 
 const Signupmodal = () => {
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const [name,setname]=useState("");
+    const [email,setemail]=useState("");
+    const [password,setpassword]=useState("");
+    const navigate=useNavigate()
+
+    const Handleregister=()=>{
+   const user={
+    name,
+    email,
+    password
+   }
+   fetch("https://combative-red-horse.cyclic.app/user/register",{
+    method:"POST",
+    headers: {
+        "Content-Type": "application/json",
+      },
+      body:JSON.stringify(user)
+   }).then((res)=>res.json()).then((res)=>{
+    console.log(res)
+    
+    if(res){
+        alert("Registered succesfully")
+        navigate('/login')
+    }
+   }).catch((err)=>{
+    alert("SomeError occured")
+   })
+
+    }
     return (
         <>
             <Button onClick={onOpen}>Sign Up</Button>
@@ -37,15 +66,16 @@ const Signupmodal = () => {
                             </Box>
 
                             <Box display="flex" flexDirection="column" w='50%' h="300px"  textAlign="center" alignItems="center" justifyContent="space-between"  >
-                                <Text fontSize='md' as="b">Please enter your Mobile No to receive One-Time password</Text>
-                                <Input w="90%" variant='flushed' placeholder='Enter Mobile No' />
+                                <Input w="90%" variant='flushed' placeholder='Enter Name' onChange={(e)=>setname(e.target.value)}  />
+                                <Input w="90%" variant='flushed' placeholder='Enter Email' onChange={(e)=>setemail(e.target.value)} />
+                                <Input w="90%" variant='flushed' placeholder='Enter Password' onChange={(e)=>setpassword(e.target.value)} />
                                 <Box display="flex"  >
                                     <input type="checkbox" />
                                     <Box paddingLeft="5px">
                                         <Text fontSize='xs'>Are you a healthcare Professional</Text>
                                     </Box>
                                 </Box>
-                                <Button colorScheme='red' variant='solid' w="90%" >Continue</Button>
+                                <Button colorScheme='red' variant='solid' w="90%" onClick={Handleregister}  >Register</Button>
                                 <Box display="flex" justifyContent="center" >
                                     <Text fontSize='md'>Have an account?</Text>
                                     <Link to="/Loginmodal" ><Text color="red" >Login</Text></Link>

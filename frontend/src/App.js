@@ -2,11 +2,9 @@ import './App.css';
 //import Filter from './components/Filter';
 //import MainRoutes from './pages/MainRoutes';
 import Medicines from './pages/Medicines';
-
-
-
 import Admin from './Admin/Admin';
-import Filter from './components/Filter';
+import MainRoutes from './pages/MainRoutes';
+
 import CartPage from './pages/Cart';
 
 function App() {
@@ -14,8 +12,8 @@ function App() {
     <div className="App">
       
 
-      {/* <Admin/> */}
-     <CartPage/>
+      <Admin/>
+     
      
     </div>
   );

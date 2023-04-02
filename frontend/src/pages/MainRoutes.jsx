@@ -1,14 +1,18 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Signupmodal from "../components/Signupmodal"
 
 import SinglePage from "./SinglePage";
 import Medicines from "./Medicines";
+import Loginmodal from "../components/Loginmodal";
 
 const MainRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Medicines />} />;
-      <Route path="/medicines/:id" element={<SinglePage />} />
+      <Route path="/getdata" element={<Medicines />} />;
+      <Route path="/getdata/:id" element={<SinglePage />} />
+      <Route path="/signup" element={< Signupmodal/>} />;
+      <Route path="/login" element={<Loginmodal/>} />;
       <Route path="*" element={<div>Page Not Found</div>} />
     </Routes>
   );
