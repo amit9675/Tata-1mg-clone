@@ -58,10 +58,22 @@ export const BlogAuthor = (props) => {
 const SinglePage = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
- 
+  const handleCart = async(id)=>{
+    console.log("In cart",data)
+    // const data = await  axios.get(`https://combative-red-horse.cyclic.app/getdata/${id}`)
+    // console.log("data",data)
+    // const payload  ={
+  
+    // }
+    await axios.post(`https://combative-red-horse.cyclic.app/cart/add_to_cart`,data,{
+      headers:{
+        "Authorization":localStorage.getItem("token")
+      }
+    })
+  }
   const getData = (id) => {
 
-    axios.get(`https://shy-pear-raven-cap.cyclic.app/getdata/${id}`)
+    axios.get(`https://combative-red-horse.cyclic.app/getdata/${id}`)
   .then((res) => {
         setData(res.data[0]);
 
@@ -149,7 +161,7 @@ const SinglePage = () => {
           <br />
 
           <Stack direction="row" spacing={4}>
-            <Button w="300px" colorScheme="orange" variant="solid" >
+            <Button w="300px" colorScheme="orange" variant="solid" onClick={(id)=>handleCart(id)} >
               Add To Cart
             </Button>
           </Stack>
