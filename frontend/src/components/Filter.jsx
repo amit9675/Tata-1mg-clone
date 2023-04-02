@@ -1,4 +1,4 @@
-import { Box, Select } from "@chakra-ui/react";
+import { Box, Heading, Select,Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -40,18 +40,20 @@ const Filter = () => {
   }, [category, setSearchParams,price]);
   
   return (
-    <div >
-      <h3>Filters</h3>
-      <div>Category</div>
+    <div style={{marginLeft:"50px" ,width:"180px",backgroundColor:"#FCFCFC", marginTop:"50px", padding:"1rem"}}>
+      <Text as="h6" fontSize='2xl'  textAlign="center"><u>Filters</u></Text >
+      <Text>Category</Text>
       <div style={{
             fontWeight: "700",
             padding: "10px 0px",
             borderTop: "1px solid grey",
             marginTop: "10px",
+            backgroundColor:"#FCFCFC",
+            
           }}>
         <div>
           <input onChange={handleChange} type="checkbox" value="Veterinary" />
-          <label>Veterinary</label>
+          <label style={{fontWeight:"10px"}}>Veterinary</label>
         </div>
         <div>
           <input onChange={handleChange} type="checkbox" value="ayurveda" />

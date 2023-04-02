@@ -1,0 +1,38 @@
+.main_div:hover {
+  /* padding: 1rem; */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.ldsCircle {
+  display: flex;
+  transform: translateZ(1px);
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+}
+.ldsCircle > div {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  margin: 8px;
+
+  border-radius: 50%;
+  background: #fcf;
+  animation: ldsCircle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes ldsCircle {
+  0%,
+  100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
