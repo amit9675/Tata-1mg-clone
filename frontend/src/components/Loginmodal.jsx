@@ -77,7 +77,7 @@ const Loginmodal = () => {
                                 <Button colorScheme='red' variant='solid' w="90%"  isLoading={loading}  onClick={HandleLogin} >Login</Button>
                                 <Box display="flex" justifyContent="center" >
                                     <Text fontSize='md'>New on 1mg?</Text>
-                                    <Link to="/Signupmodal" ><Text color="red" >Sign Up</Text></Link>
+                                    <Link to="/signup" ><Text color="red" >Sign Up</Text></Link>
                                 </Box>
                                 <Box>
                                     <Text fontSize='xs'>By signing up, you agree to our</Text>

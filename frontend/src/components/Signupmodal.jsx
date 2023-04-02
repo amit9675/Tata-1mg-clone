@@ -83,7 +83,7 @@ const Signupmodal = () => {
                                 <Button isLoading={loading}  colorScheme='red' variant='solid' w="90%" onClick={Handleregister}  >Register</Button>
                                 <Box display="flex" justifyContent="center" >
                                     <Text fontSize='md'>Have an account?</Text>
-                                    <Link to="/Loginmodal" ><Text color="red" >Login</Text></Link>
+                                    <Link to="/login" ><Text color="red" >Login</Text></Link>
                                 </Box>
                                 <Box>
                                     <Text fontSize='xs'>By signing up, you agree to our</Text>
