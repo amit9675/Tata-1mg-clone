@@ -26,6 +26,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import Category from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
 const BlogTags = (props) => {
   return (
@@ -60,6 +61,7 @@ export const BlogAuthor = (props) => {
 const SinglePage = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
+  const navigate=useNavigate()
   const handleCart = async(id)=>{
     console.log("In cart",data)
     // const data = await  axios.get(`https://combative-red-horse.cyclic.app/getdata/${id}`)
@@ -216,6 +218,9 @@ const SinglePage = () => {
           <Stack direction="row" spacing={4}>
             <Button w="300px" colorScheme="orange" variant="solid" onClick={(id)=>handleCart(id)} >
               Add To Cart
+            </Button>
+            <Button w="200px" colorScheme="orange" variant="solid" onClick={()=>navigate('/cart')} >
+              Go To Cart
             </Button>
           </Stack>
         </Box>

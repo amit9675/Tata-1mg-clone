@@ -7,6 +7,7 @@ import Medicines from "./Medicines";
 import Loginmodal from "../components/Loginmodal";
 import Homepage from "./Homepage";
 import Admin from "../Admin/Admin";
+import CartPage from "./Cart";
 
 
 
@@ -19,6 +20,7 @@ const MainRoutes = () => {
       <Route path="/signup" element={< Signupmodal/>} />;
       <Route path="/login" element={<Loginmodal/>} />;
       <Route path='/admin' element={<Admin/>}/>
+      <Route path='/cart' element={<CartPage/>}/>
       <Route path="*" element={<div>Page Not Found</div>} />
     </Routes>
   );

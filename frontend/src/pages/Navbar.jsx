@@ -236,7 +236,7 @@ import PersonIcon from '@mui/icons-material/Person';
       >
 
         <Stack direction={"row"} spacing={4} justify="center" alignItems={'center'} width={'100%'} mr={'20px'} >
-        <Image width={"40px"} mr={"10px"} src={logo}/>
+        <Image width={"40px"} mr={"10px"} src={logo} onClick={()=>navigate('/')}/>
           {CAT_ITEMS.map((navItem) => (
             <Box key={navItem.label}>
               <Popover trigger={"hover"} placement={"bottom-start"}>
