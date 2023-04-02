@@ -21,7 +21,7 @@ const Medicines = () => {
 
   const getData = (params) => {
     axios
-      .get("https://shy-pear-raven-cap.cyclic.app/getdata",params)
+      .get("https://combative-red-horse.cyclic.app/getdata",params)
       .then((res) => {
         setMedicine(res.data);
         // console.log(res.data)

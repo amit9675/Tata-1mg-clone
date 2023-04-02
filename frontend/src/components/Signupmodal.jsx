@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Carousalsignup from "./Carousalsignup"
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 
 import {
@@ -25,6 +25,7 @@ const Signupmodal = () => {
     const [name,setname]=useState("");
     const [email,setemail]=useState("");
     const [password,setpassword]=useState("");
+    const navigate=useNavigate()
 
     const Handleregister=()=>{
    const user={
@@ -32,7 +33,22 @@ const Signupmodal = () => {
     email,
     password
    }
-//    fetch("")
+   fetch("https://combative-red-horse.cyclic.app/user/register",{
+    method:"POST",
+    headers: {
+        "Content-Type": "application/json",
+      },
+      body:JSON.stringify(user)
+   }).then((res)=>res.json()).then((res)=>{
+    console.log(res)
+    
+    if(res){
+        alert("Registered succesfully")
+        navigate('/login')
+    }
+   }).catch((err)=>{
+    alert("SomeError occured")
+   })
 
     }
     return (
