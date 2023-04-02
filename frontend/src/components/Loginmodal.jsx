@@ -58,7 +58,7 @@ const Loginmodal = () => {
 
     return (
         <>
-            <Button onClick={onOpen}>Login</Button>
+            <Text onClick={onOpen}>Login</Text>
             <Modal isOpen={isOpen} onClose={onClose} size="xl" >
                 <ModalOverlay />
                 <ModalContent>

@@ -6,6 +6,7 @@ import SinglePage from "./SinglePage";
 import Medicines from "./Medicines";
 import Loginmodal from "../components/Loginmodal";
 import Homepage from "./Homepage";
+import Admin from "../Admin/Admin";
 
 
 
@@ -17,6 +18,7 @@ const MainRoutes = () => {
       <Route path="/getdata/:id" element={<SinglePage />} />
       <Route path="/signup" element={< Signupmodal/>} />;
       <Route path="/login" element={<Loginmodal/>} />;
+      <Route path='/admin' element={<Admin/>}/>
       <Route path="*" element={<div>Page Not Found</div>} />
     </Routes>
   );

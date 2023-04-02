@@ -27,12 +27,14 @@ import {
   Box,
   Image
 } from '@chakra-ui/react'
+import Category from "./Navbar";
 
 
 
 const Homepage = () => {
   return (
     <Box w="100%" margin="auto" bgColor="#CBD5E0">
+      <Category/>
     <Box display="flex" flexDirection={{ base: 'column ', md: 'row',lg: 'row',xl: 'row', '2xl': 'row'}} >
         <Box margin="auto" w='95%' bgColor="white">
          <Moveslider/>

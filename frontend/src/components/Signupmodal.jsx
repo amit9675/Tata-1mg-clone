@@ -58,7 +58,7 @@ const Signupmodal = () => {
     }
     return (
         <>
-            <Button onClick={onOpen}>Sign Up</Button>
+            <Text onClick={onOpen}>Sign Up</Text>
             <Modal isOpen={isOpen} onClose={onClose} size="xl" >
                 <ModalOverlay />
                 <ModalContent>
