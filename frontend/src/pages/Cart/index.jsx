@@ -17,7 +17,7 @@ const CartPage = () => {
         getData()
     },[])
 
-    data.map((ele)=>{
+    data?.map((ele)=>{
         return(totalSum+=ele.quantity*ele.price)
     })
 
