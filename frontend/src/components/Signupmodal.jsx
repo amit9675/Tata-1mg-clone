@@ -18,6 +18,7 @@ import {
     Input,
     Text,
     Box,
+    useToast,
 } from '@chakra-ui/react'
 
 const Signupmodal = () => {
@@ -27,7 +28,7 @@ const Signupmodal = () => {
     const [password,setpassword]=useState("");
     const navigate=useNavigate();
     const [loading,setloading]=useState(false)
-
+    const toast=useToast()
     const Handleregister=()=>{
         setloading(true)
    const user={
@@ -45,9 +46,15 @@ const Signupmodal = () => {
     console.log(res)
     
     if(res){
-        alert("Registered succesfully")
+        toast({
+            title: "Registration Successful.",
+            description: "Thank You For Registration",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+          })
         setloading(false)
-        
+        onClose()
     }
    }).catch((err)=>{
     alert("SomeError occured")

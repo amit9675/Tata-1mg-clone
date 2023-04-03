@@ -42,7 +42,6 @@ const CartItem = ({data,getData}) => {
                 }
             })
             .then(res=>getData())
-        
         } catch (error) {
             console.log(error)
         }

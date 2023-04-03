@@ -279,7 +279,7 @@ import {BsFillPersonFill} from "react-icons/bs"
             <Divider orientation="vertical"  colorScheme={'grey'}/>
             <Text color={'rgb(255, 111, 97)'} cursor={'pointer'} ><Loginmodal/></Text> 
         </Flex>
-        <BsFillPersonFill onClick={()=>navigate('/admin')}/>
+        <a href="https://nimble-haupia-fb7c35.netlify.app" external ><BsFillPersonFill /></a>
         </Stack>
             
       </Box>
