@@ -1,6 +1,6 @@
 import { Button, Flex, Image, Text } from '@chakra-ui/react'
-import DeleteOutlineOutlined from '@mui/icons-material/DeleteOutlineOutlined'
 import axios from 'axios'
+import {DeleteIcon} from "@chakra-ui/icons"
 import React, { useState } from 'react'
 
 const CartItem = ({data,getData}) => {
@@ -56,7 +56,7 @@ const CartItem = ({data,getData}) => {
                             <Image h="100px" w='100px' src={data.image} alt={data.name} />
                             <Text>{data.name}</Text>
                             <Flex gap={'5px'} cursor={'pointer'} onClick={handleDelete} >
-                                <DeleteOutlineOutlined/>
+                                <DeleteIcon/>
                                 <Text>
                                     Remove
                                 </Text>

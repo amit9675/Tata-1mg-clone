@@ -1,6 +1,5 @@
 import { Box, Button, Divider, Flex, Grid, Image, Input, InputGroup, InputLeftElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure, useToast } from '@chakra-ui/react'
-import DeleteOutlineOutlined from '@mui/icons-material/DeleteOutlineOutlined'
-import { GridSearchIcon } from '@mui/x-data-grid'
+import { BiSearch } from "react-icons/bi"
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import CartItem from './CartItem'
@@ -60,7 +59,7 @@ const CartPage = () => {
                     <InputLeftElement
                     mt='35px'
                     pointerEvents='none'
-                    children={<GridSearchIcon color='gray.300' />}
+                    children={<BiSearch color='gray.300' />}
                     />
                 </InputGroup>
             </Flex>

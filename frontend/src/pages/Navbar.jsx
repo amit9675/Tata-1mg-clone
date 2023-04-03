@@ -17,7 +17,7 @@ import {
   import { useNavigate } from "react-router-dom";
 import Signupmodal from "../components/Signupmodal";
 import Loginmodal from "../components/Loginmodal";
-import PersonIcon from '@mui/icons-material/Person';
+import {BsFillPersonFill} from "react-icons/bs"
 // import { useNavigate } from "react-router-dom";
   const CAT_ITEMS = [
     {
@@ -279,7 +279,7 @@ import PersonIcon from '@mui/icons-material/Person';
             <Divider orientation="vertical"  colorScheme={'grey'}/>
             <Text color={'rgb(255, 111, 97)'} cursor={'pointer'} ><Loginmodal/></Text> 
         </Flex>
-        <PersonIcon onClick={()=>navigate('/admin')}/>
+        <BsFillPersonFill onClick={()=>navigate('/admin')}/>
         </Stack>
             
       </Box>
