@@ -98,7 +98,7 @@ const SinglePage = () => {
   }, [id]);
 
   return (
-    <Container maxW={"10xl"} p="12" border="1px solid red" background="#F3F3F4">
+    <Container maxW={"10xl"} p="12" background="#F3F3F4">
     <Category/>
       <Box maxW={"5xl"} p="12"  background="#F3F3F4" marginLeft="200px">
       <Box

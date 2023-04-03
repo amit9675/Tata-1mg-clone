@@ -3,7 +3,7 @@ import Carousalsignup from "./Carousalsignup"
 import { Link } from "react-router-dom";
 import React, { useState } from 'react'
 import {  Navigate, useNavigate } from "react-router-dom";
-import { Spinner } from '@chakra-ui/react'
+import { Spinner, useToast } from '@chakra-ui/react'
 
 import {
     Modal,
@@ -28,7 +28,7 @@ const Loginmodal = () => {
     const [password,setpassword]=useState("");
     const navigate=useNavigate();
     const [loading,setloading]=useState(false);
-
+    const toast=useToast()
     const HandleLogin=()=>{
         console.log("hilogin")
         setloading(true)
@@ -46,8 +46,15 @@ const Loginmodal = () => {
             console.log(res)
             
             if(res){
-                alert("Login succesfull")
+                toast({
+                    title: "Login Successful.",
+                    description: "Redirecting to Home",
+                    status: "success",
+                    duration: 5000,
+                    isClosable: true,
+                  })
                 setloading(false)
+                onClose()
                 navigate('/')
             }
            }).catch((err)=>{

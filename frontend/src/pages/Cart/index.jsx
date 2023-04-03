@@ -1,6 +1,5 @@
 import { Box, Button, Divider, Flex, Grid, Image, Input, InputGroup, InputLeftElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure, useToast } from '@chakra-ui/react'
-import DeleteOutlineOutlined from '@mui/icons-material/DeleteOutlineOutlined'
-import { GridSearchIcon } from '@mui/x-data-grid'
+import { BiSearch } from "react-icons/bi"
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import CartItem from './CartItem'
@@ -60,7 +59,7 @@ const CartPage = () => {
                     <InputLeftElement
                     mt='35px'
                     pointerEvents='none'
-                    children={<GridSearchIcon color='gray.300' />}
+                    children={<BiSearch color='gray.300' />}
                     />
                 </InputGroup>
             </Flex>
@@ -74,7 +73,7 @@ const CartPage = () => {
 
         <Box>
             <Flex w='80%' m='80px auto auto auto' h='100vh'  justifyContent={'center'} gap="30px" >
-            <Flex flexDir={'column'} w='60%' border={'1px solid aqua'} gap={'10px'} >
+            <Flex flexDir={'column'} w='60%' gap={'10px'} >
             {
                 data.map((ele,id)=>{
                     return(
@@ -89,8 +88,8 @@ const CartPage = () => {
                             <Text>Rs.{totalSum}</Text>
                     </Flex>
                     <Flex justifyContent={'space-between'} flexDir='row' w="90%" mt='10px' >
-                            <Text fontSize={'small'} color='grey' >Price Discount</Text>
-                            <Text fontSize={'small'} color='grey' >main_Price-Discounted_price</Text>
+                            <Text fontSize={'small'} color='grey' as={'s'} >Rs.{data.mainprice}</Text>
+                            <Text fontSize={'small'} color='grey' >Rs.{data.price-(data.price+90)}</Text>
                     </Flex>
                     <Divider orientation='horizontal'/>
                     <Flex justifyContent={'space-between'} flexDir='row' w="90%" mt='10px' >
@@ -100,11 +99,11 @@ const CartPage = () => {
                     <Divider orientation='horizontal'/>
                     <Flex justifyContent={'space-between'} flexDir='row' w="90%" mt='10px' >
                             <Text fontWeight={'medium'} >To be paid</Text>
-                            <Text>Discounted Price</Text>
+                            <Text>{totalSum}</Text>
                     </Flex>
                     <Flex bgColor={'#e4f6e7'} justifyContent={'space-around'} gap="80px" flexDir='row' w="100%" mt='10px' h='50px' alignItems={'center'}  >
                             <Text fontSize={'small'} >Total Savings</Text>
-                            <Text color='#1aab2a' >main_Price</Text>
+                            <Text color='#1aab2a' >Rs.{90*data[0].quantity}</Text>
                     </Flex>
                     <Flex mt='20px' >
                         <Button bgColor={'rgb(255, 111, 97)'} color='white' ml='4'
