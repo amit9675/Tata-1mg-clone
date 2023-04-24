@@ -16,7 +16,7 @@ const CartPage = () => {
         getData()
     },[])
 
-    data.map((ele)=>{
+    data?.map((ele)=>{
         return(totalSum+=ele.quantity*ele.price)
     })
 
@@ -75,7 +75,7 @@ const CartPage = () => {
             <Flex w='80%' m='80px auto auto auto' h='100vh'  justifyContent={'center'} gap="30px" >
             <Flex flexDir={'column'} w='60%' gap={'10px'} >
             {
-                data.map((ele,id)=>{
+                data?.map((ele,id)=>{
                     return(
                         <CartItem data={ele} getData={getData} key={id}/>
                     )
@@ -103,7 +103,7 @@ const CartPage = () => {
                     </Flex>
                     <Flex bgColor={'#e4f6e7'} justifyContent={'space-around'} gap="80px" flexDir='row' w="100%" mt='10px' h='50px' alignItems={'center'}  >
                             <Text fontSize={'small'} >Total Savings</Text>
-                            <Text color='#1aab2a' >Rs.{90*data[0].quantity}</Text>
+                            <Text color='#1aab2a' >Rs.{90}</Text>
                     </Flex>
                     <Flex mt='20px' >
                         <Button bgColor={'rgb(255, 111, 97)'} color='white' ml='4'

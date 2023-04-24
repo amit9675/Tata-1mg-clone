@@ -12,7 +12,11 @@ const AllProducts = () => {
     const [data,setData]=useState([])
     const getData=async()=>{
         try {
-            await axios.get('https://combative-red-horse.cyclic.app/getdata')
+            await axios.get('https://alert-fox-jumpsuit.cyclic.app/getdata',{
+              headers:{
+                "Access-Control-Allow-Origin": "https://tangerine-axolotl-576458.netlify.app"
+              }
+            })
             .then(res=>setData(res.data))
             .then(res=>console.log(data))
         } catch (error) {
@@ -21,7 +25,7 @@ const AllProducts = () => {
     }
     const handleDelete=async(params)=>{
         try {
-            await axios.delete(`https://combative-red-horse.cyclic.app/admin/delete/${params.id}`)
+            await axios.delete(`https://alert-fox-jumpsuit.cyclic.app/admin/delete/${params.id}`)
             .then((res)=>getData())
             .then((res)=>console.log(data))
         } catch (error) {
